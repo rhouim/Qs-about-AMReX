@@ -1,0 +1,17 @@
+MLMG: # of AMR levels: 1
+      # of MG levels on the coarsest AMR level: 6
+MLMG: Initial rhs               = 522.9256522
+MLMG: Initial residual (resid0) = 522.9256522
+MLMG: Iteration   1 Fine resid/bnorm = 0.01702746811
+MLMG: Iteration   2 Fine resid/bnorm = 0.0006559865546
+MLMG: Iteration   3 Fine resid/bnorm = 3.544329667e-05
+MLMG: Iteration   4 Fine resid/bnorm = 1.638593909e-06
+MLMG: Iteration   5 Fine resid/bnorm = 9.704076023e-08
+MLMG: Iteration   6 Fine resid/bnorm = 7.183129518e-09
+MLMG: Iteration   7 Fine resid/bnorm = 3.485542678e-10
+MLMG: Iteration   8 Fine resid/bnorm = 2.493030701e-11
+MLMG: Iteration   9 Fine resid/bnorm = 1.669116035e-12
+MLMG: Iteration  10 Fine resid/bnorm = 1.045715812e-13
+MLMG: Final Iter. 10 resid, resid/bnorm = 5.46831623e-11, 1.045715812e-13
+MLMG: Timers: Solve = 0.0047528 Iter = 0.004521134 Bottom = 0.000392492
+
