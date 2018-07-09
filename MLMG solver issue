@@ -1,0 +1,21 @@
+MLMG can solve on 1 cpu but fail when using 2 cpu?
+
+When solving Poisson equation with Neumann boundary condition on 1 level (64*64 grids), I found I can solve it on 1 CPU, but the solver 
+fail when using 2 CPU.
+
+The cell centered MLMG (Multi-level MultiGrid) solver is used. Both pressure and the Rhs(right handside) are defined at the cellcenter. The 
+pressure has 2 ghost cells ((-2,-2),(65,65)). The Rhs does not have ghost cells ((0,0),(63,63)).
+
+Here the procedures.
+
+I calculate the Rhs first.
+
+  For 1 CPU, Rhs is ((0,0),(63,63)). See the SingleCoreRhs.txt
+  For 2 CPUs, Rhs in CPU 0 is ((0,0),(63,31)),  Rhs in CPU 1 is ((0,32),(63,63)). See the DoubleCoresRhs.txt
+  
+I compare the Rhs data for these two files and they are same. Then after setting the Neumann BC, I use the mlmg.solve ...
+
+  If I use 1 CPU, the MLMG solver converges, see the SingleCoreRes.txt
+  But if I use 2 CPU, the MLMG solver can not converge, see the DoubleCoreRes.txt
+  
+Not quite sure why the same rhs input can lead to different results. Is it the MLMG solver's reason?
