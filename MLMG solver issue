@@ -16,6 +16,8 @@ I calculate the Rhs first.
 I compare the Rhs data for these two files and they are same. Then after setting the Neumann BC, I use the mlmg.solve ...
 
   If I use 1 CPU, the MLMG solver converges, see the SingleCoreRes.txt
-  But if I use 2 CPU, the MLMG solver can not converge, see the DoubleCoreRes.txt
+  But if I use 2 CPU, the MLMG solver can not converge, see the DoubleCoresRes.txt
   
 Not quite sure why the same rhs input can lead to different results. Is it the MLMG solver's reason?
+
+(Codes for this issue can be provided if needed.)
