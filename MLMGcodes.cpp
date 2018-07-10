@@ -147,7 +147,7 @@
     Vector<MultiFab*> vel_in{vel.begin()+c_lev, vel.begin()+c_lev+nlevel};
 
     // Input: 
-    // vel_in: cell ccentered velocities, mf with 1 ghost cell
+    // vel_in: cell ccentered velocities, known mf with 1 ghost cell
     // Outputs:
     // 1. edge centered velocity mf velec_in
     // 2. rhs: right handside for MLMG solver
