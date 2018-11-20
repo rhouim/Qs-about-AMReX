@@ -1,0 +1,44 @@
+
+ 0: ./amr2d.gnu.MPI.ex() [0x586335]
+    amrex::BLBackTrace::print_backtrace_info(_IO_FILE*)
+    /mnt/lustre2/lshen/zengx372/amrex_Jordan/Src/Base/AMReX_BLBackTrace.cpp:105
+
+ 1: ./amr2d.gnu.MPI.ex() [0x586dfb]
+    amrex::BLBackTrace::handler(int)
+    /mnt/lustre2/lshen/zengx372/amrex_Jordan/Src/Base/AMReX_BLBackTrace.cpp:51
+
+ 2: /lib64/libc.so.6(+0x329a0) [0x7f5d50c4f9a0]
+    ??
+    ??:0
+
+ 3: ./amr2d.gnu.MPI.ex() [0x53fd61]
+    amrex::boxDiff(amrex::Box const&, amrex::Box const&)
+    /mnt/lustre2/lshen/zengx372/amrex_Jordan/Src/Base/AMReX_BoxList.cpp:414
+
+ 4: ./amr2d.gnu.MPI.ex() [0x58eae6]
+    setComplement
+    /safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/bits/stl_iterator.h:729
+    ??
+    /mnt/lustre2/lshen/zengx372/amrex_Jordan/Src/Base/AMReX_FabArray.H:1327
+
+ 5: ./amr2d.gnu.MPI.ex() [0x58de1c]
+    amrex::FillPatchTwoLevels(amrex::MultiFab&, double, amrex::Vector<amrex::MultiFab*, std::allocator<amrex::MultiFab*> > const&, amrex::Vector<double, std::allocator<double> > const&, amrex::Vector<amrex::MultiFab*, std::allocator<amrex::MultiFab*> > const&, amrex::Vector<double, std::allocator<double> > const&, int, int, int, amrex::Geometry const&, amrex::Geometry const&, amrex::PhysBCFunctBase&, amrex::PhysBCFunctBase&, amrex::IntVect const&, amrex::Interpolater*, amrex::Vector<amrex::BCRec, std::allocato    r<amrex::BCRec> > const&)
+    /mnt/lustre2/lshen/zengx372/amrex_Jordan/Src/AmrCore/AMReX_FillPatchUtil.cpp:171
+
+ 6: ./amr2d.gnu.MPI.ex() [0x5c1e75]
+    ~_Vector_base
+    /safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/bits/stl_vector.h:161
+    ~vector
+    /safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/bits/stl_vector.h:425
+    ~Vector
+    /mnt/lustre2/lshen/zengx372/amrex_Jordan/Src/Base/AMReX_Vector.H:18
+    ??
+    /mnt/lustre2/lshen/zengx372/amrex_Jordan/Src/Amr/AMReX_AmrLevel.cpp:1062
+
+ 7: ./amr2d.gnu.MPI.ex() [0x5ca05f]
+    amrex::FillPatchIterator::Initialize(int, double, int, int, int)
+    /mnt/lustre2/lshen/zengx372/amrex_Jordan/Src/Amr/AMReX_AmrLevel.cpp:953
+
+ 8: ./amr2d.gnu.MPI.ex() [0x5ca323]
+    amrex::FillPatchIterator::FillPatchIterator(amrex::AmrLevel&, amrex::MultiFab&, int, double, int, int, int)
+    /mnt/lustre2/lshen/zengx372/amrex_Jordan/Src/Amr/AMReX_AmrLevel.cpp:651
