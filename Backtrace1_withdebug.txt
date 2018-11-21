@@ -1,0 +1,43 @@
+MPT: #1  0x00002aaaabba469c in mpi_sgi_system (command=<optimized out>) at sig.c:98
+MPT: #2  MPI_SGI_stacktraceback (header=<optimized out>) at sig.c:339
+MPT: #3  0x00002aaaabafc6ee in print_traceback (ecode=6) at abort.c:227
+MPT: #4  0x00002aaaabafc921 in PMPI_Abort (comm=<optimized out>, errorcode=6)
+MPT:     at abort.c:66
+MPT: #5  0x000000000052689c in amrex::ParallelDescriptor::Abort (errorcode=6,
+MPT:     backtrace=false)
+MPT:     at ../../../amrex_Jordan/Src/Base/AMReX_ParallelDescriptor.cpp:325
+MPT: #6  0x00000000005c81f3 in amrex::BLBackTrace::handler (s=6)
+MPT:     at ../../../amrex_Jordan/Src/Base/AMReX_BLBackTrace.cpp:78
+MPT: #7  0x0000000000526887 in amrex::ParallelDescriptor::Abort (errorcode=6,
+MPT:     backtrace=true)
+MPT:     at ../../../amrex_Jordan/Src/Base/AMReX_ParallelDescriptor.cpp:323
+MPT: #8  0x00000000004d8d9e in amrex::Assert (
+MPT:     EX=0x12765e0 "mfi.LocalIndex() < indexArray.size()",
+MPT:     file=0x12765b0 "../../../amrex_Jordan/Src/Base/AMReX_FabArray.H",
+MPT:     line=852, msg=0x0) at ../../../amrex_Jordan/Src/Base/AMReX.cpp:243
+MPT: #9  0x00000000004161ac in amrex::FabArray<amrex::FArrayBox>::operator[] (this=
+MPT:     0x7fffffff3750, mfi=...)
+MPT:     at ../../../amrex_Jordan/Src/Base/AMReX_FabArray.H:852
+MPT: #10 0x0000000000416a19 in amrex::FabArray<amrex::FArrayBox>::get (
+MPT:     this=0x7fffffff3750, mfi=...)
+MPT:     at ../../../amrex_Jordan/Src/Base/AMReX_FabArray.H:217
+MPT: #11 0x00000000005d0fd6 in amrex::FabArray<amrex::FArrayBox>::setDomainBndry<std::enable_if<true, void> > (this=0x7fffffff3750, val=nan(0x8000000000000),
+MPT:     strt_comp=0, ncomp=2, geom=...)
+MPT:     at ../../../amrex_Jordan/Src/Base/AMReX_FabArray.H:1327
+MPT: #12 0x00000000005d0e7d in amrex::FabArray<amrex::FArrayBox>::setDomainBndry<std::enable_if<true, void> > (this=0x7fffffff3750, val=nan(0x8000000000000),
+MPT:     geom=...) at ../../../amrex_Jordan/Src/Base/AMReX_FabArray.H:1304
+MPT: #13 0x00000000005cf051 in amrex::FillPatchTwoLevels (mf=...,
+MPT:     time=3.9889999999996717, cmf=..., ct=..., fmf=..., ft=..., scomp=0,
+MPT:     dcomp=0, ncomp=2, cgeom=..., fgeom=..., cbc=..., fbc=..., ratio=...,
+MPT:     mapper=0x175ed70 <amrex::cell_cons_interp>, bcs=...)
+MPT:     at ../../../amrex_Jordan/Src/AmrCore/AMReX_FillPatchUtil.cpp:169
+MPT: #14 0x000000000060f2f0 in amrex::FillPatchIterator::FillFromTwoLevels (
+MPT:     this=0x7fffffff43d0, time=3.9889999999996717, idx=0, scomp=0, dcomp=0,
+MPT:     ncomp=2) at ../../../amrex_Jordan/Src/Amr/AMReX_AmrLevel.cpp:1076
+MPT: #15 0x000000000060eaef in amrex::FillPatchIterator::Initialize (
+MPT:     this=0x7fffffff43d0, boxGrow=3, time=3.9889999999996717, idx=0, scomp=0,
+MPT:     ncomp=2) at ../../../amrex_Jordan/Src/Amr/AMReX_AmrLevel.cpp:953
+MPT: #16 0x000000000060d285 in amrex::FillPatchIterator::FillPatchIterator (
+MPT:     this=0x7fffffff43d0, amrlevel=..., leveldata=..., boxGrow=3,
+MPT:     time=3.9889999999996717, idx=0, scomp=0, ncomp=2)
+MPT:     at ../../../amrex_Jordan/Src/Amr/AMReX_AmrLevel.cpp:646
