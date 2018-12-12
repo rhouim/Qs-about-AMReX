@@ -1,0 +1,55 @@
+../../../amrex-master/Src/Extern/Algoim/AMReX_algoim_integrals.cpp: In function ‘void amrex::compute_integrals(amrex::MultiFab*)’:
+../../../amrex-master/Src/Extern/Algoim/AMReX_algoim_integrals.cpp:163:39: warning: use of ‘auto’ in lambda parameter declaration only available with -std=c++1y or -std=gnu++1y
+                  Real volume   = q([](const auto& x) { return 1.0; });
+                                       ^
+In file included from /safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/bits/move.h:57:0,
+                 from /safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/bits/stl_pair.h:59,
+                 from /safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/bits/stl_algobase.h:64,
+                 from /safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/bits/stl_tree.h:61,
+                 from /safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/map:60,
+                 from /safl/software/westmere/openmpi/gcc-4.9.2/1.8.5/include/openmpi/ompi/mpi/cxx/mpicxx.h:38,
+                 from /safl/software/westmere/openmpi/gcc-4.9.2/1.8.5/include/mpi.h:2664,
+                 from ../../../amrex-master/Src/Base/AMReX_ccse-mpi.H:13,
+                 from ../../../amrex-master/Src/Base/AMReX.H:6,
+                 from ../../../amrex-master/Src/Extern/Algoim/AMReX_algoim_integrals.cpp:5:
+/safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/type_traits: In instantiation of ‘class std::result_of<amrex::compute_integrals(amrex::MultiFab*)::<lambda(const auto:1&)>(const blitz::TinyVector<double, 3>&)>’:
+../../src/extern/algoim/src/algoim_quad.hpp:556:30:   required by substitution of ‘template<class F, class R> R Algoim::QuadratureRule<N>::operator()(const F&) const [with F = amrex::compute_integrals(amrex::MultiFab*)::<lambda(const auto:1&)>; R = <missing>]’
+../../../amrex-master/Src/Extern/Algoim/AMReX_algoim_integrals.cpp:163:69:   required from here
+/safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/type_traits:2210:12: error: invalid use of incomplete type ‘std::__result_of_impl<false, false, amrex::compute_integrals(amrex::MultiFab*)::<lambda(const auto:1&)>, const blitz::TinyVector<double, 3>&>::type’
+     struct result_of<_Functor(_ArgTypes...)>
+            ^
+/safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/type_traits:154:12: error: declaration of ‘std::__result_of_impl<false, false, amrex::compute_integrals(amrex::MultiFab*)::<lambda(const auto:1&)>, const blitz::TinyVector<double, 3>&>::type’
+     struct __success_type
+            ^
+../../../amrex-master/Src/Extern/Algoim/AMReX_algoim_integrals.cpp:163:69: error: no match for call to ‘(Algoim::QuadratureRule<3>) (amrex::compute_integrals(amrex::MultiFab*)::<lambda(const auto:1&)>)’
+                  Real volume   = q([](const auto& x) { return 1.0; });
+                                                                     ^
+In file included from ../../../amrex-master/Src/Extern/Algoim/AMReX_algoim_integrals.cpp:21:0:
+../../src/extern/algoim/src/algoim_quad.hpp:539:12: note: candidate is:
+     struct QuadratureRule
+            ^
+../../src/extern/algoim/src/algoim_quad.hpp:557:11: note: template<class F, class R> R Algoim::QuadratureRule<N>::operator()(const F&) const [with F = F; R = R; int N = 3]
+         R operator()(const F& f) const
+           ^
+../../src/extern/algoim/src/algoim_quad.hpp:557:11: note:   substitution of deduced template arguments resulted in errors seen above
+../../../amrex-master/Src/Extern/Algoim/AMReX_algoim_integrals.cpp:181:40: warning: use of ‘auto’ in lambda parameter declaration only available with -std=c++1y or -std=gnu++1y
+                  Real val_S_x   = q([](const auto& x) { return x(0); });
+                                        ^
+In file included from /safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/bits/move.h:57:0,
+                 from /safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/bits/stl_pair.h:59,
+                 from /safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/bits/stl_algobase.h:64,
+                 from /safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/bits/stl_tree.h:61,
+                 from /safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/map:60,
+                 from /safl/software/westmere/openmpi/gcc-4.9.2/1.8.5/include/openmpi/ompi/mpi/cxx/mpicxx.h:38,
+                 from /safl/software/westmere/openmpi/gcc-4.9.2/1.8.5/include/mpi.h:2664,
+                 from ../../../amrex-master/Src/Base/AMReX_ccse-mpi.H:13,
+                 from ../../../amrex-master/Src/Base/AMReX.H:6,
+                 from ../../../amrex-master/Src/Extern/Algoim/AMReX_algoim_integrals.cpp:5:
+/safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/type_traits: In instantiation of ‘class std::result_of<amrex::compute_integrals(amrex::MultiFab*)::<lambda(const auto:2&)>(const blitz::TinyVector<double, 3>&)>’:
+../../src/extern/algoim/src/algoim_quad.hpp:556:30:   required by substitution of ‘template<class F, class R> R Algoim::QuadratureRule<N>::operator()(const F&) const [with F = amrex::compute_integrals(amrex::MultiFab*)::<lambda(const auto:2&)>; R = <missing>]’
+../../../amrex-master/Src/Extern/Algoim/AMReX_algoim_integrals.cpp:181:71:   required from here
+/safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/type_traits:2210:12: error: invalid use of incomplete type ‘std::__result_of_impl<false, false, amrex::compute_integrals(amrex::MultiFab*)::<lambda(const auto:2&)>, const blitz::TinyVector<double, 3>&>::type’
+     struct result_of<_Functor(_ArgTypes...)>
+            ^
+/safl/software/westmere/compilers/gcc/4.9.2/include/c++/4.9.2/type_traits:154:12: error: declaration of ‘std::__result_of_impl<false, false, amrex::compute_integrals(amrex::MultiFab*)::<lambda(const auto:2&)>, const blitz::TinyVector<double, 3>&>::type’
+     struct __success_type
